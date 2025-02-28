@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kjw.fapp.team.TeamDao">
+
+	<resultMap id="resultMapObj" type="com.kjw.fapp.team.TeamDto"></resultMap>
+	
+	<select id="selectList" resultMap="resultMapObj">
+		SELECT
+			groupseq,
+    		name
+		FROM
+			team	
+		WHERE 1=1
+		ORDER BY groupseq DESC
+	</select>
+
+	  
+</mapper>
