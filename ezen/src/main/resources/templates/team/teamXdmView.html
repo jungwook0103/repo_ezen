@@ -8,10 +8,12 @@
 	<td>groupseq</td>
 	<td>name</td>
 </tr>
-<tr th:each="list : ${list}">
-	<td th:text = "${list.groupseq}"></td>
-	<td><a th:href = "@{/team/teamXdmView(groupseq=${list.groupseq})}" th:text="${list.name}"></a></td>
+<tr>
+	<td th:text = "${item.groupseq}"></td>
+	<td th:text = "${item.name}"></td>
 </tr>
 </table>
+
+
 </body>
 </html>

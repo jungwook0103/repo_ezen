@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<table>
+<tr>
+	<td>contactseq</td>
+	<td>lastName</td>
+	<td>fistName</td>
+	<td>id</td>
+	<td>memo</td>
+	<td>nickname</td>
+	<td>bookmark</td>
+</tr>
+<tr>
+	<td th:text = "${item.contactseq}"></td>
+	<td th:text = "${item.lastName}"></td>
+	<td th:text = "${item.firstName}"></td>
+	<td th:text = "${item.id}"></td>
+	<td th:text = "${item.memo}"></td>
+	<td th:text = "${item.nickname}"></td>
+	<td th:text = "${item.bookmark}"></td>
+</tr>
+</table>
+
+
+</body>
+</html>

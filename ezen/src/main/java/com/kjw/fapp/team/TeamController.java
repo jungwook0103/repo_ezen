@@ -20,13 +20,22 @@ public class TeamController {
 	@RequestMapping(value = "/team/teamXdmList")
 	public String codeGroupXdmList(Model model) {
 		
-		List<TeamDto> teamDtos = new ArrayList<>();
+//		List<TeamDto> teamDtos = new ArrayList<>();
+//		
+//		teamDtos = teamService.selectList();
 		
-		teamDtos = teamService.selectList();
-		
-		model.addAttribute("list", teamDtos);
+		model.addAttribute("list", teamService.selectList());
 		
 		return "team/teamXdmList";
 	}
 
+	@RequestMapping(value = "/team/teamXdmView")
+	public String codeGroupXdmView(Model model, TeamDto teamDto) {
+		
+		System.out.println("teamDto.getGroupseq(): " + teamDto.getGroupseq());
+			
+		model.addAttribute("item", teamService.selectOne(teamDto));
+		
+		return "team/teamXdmView";
+	}
 }

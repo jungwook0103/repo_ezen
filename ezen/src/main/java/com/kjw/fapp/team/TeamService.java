@@ -17,14 +17,18 @@ public class TeamService {
 	TeamDao teamDao; // TeamDao teamDao = new TeamDao();
 	
 	public List<TeamDto> selectList() {
-		List<TeamDto> teamDtos = new ArrayList<>();
-		
-		teamDtos = teamDao.selectList();
-		return teamDtos;
+//		List<TeamDto> teamDtos = new ArrayList<>();
+//		
+//		teamDtos = teamDao.selectList();
+		return teamDao.selectList();
 	}
 	
 //	public List<TeamDto> selectList() {
 //		return teamDao.selectList();
 //	}
+	
+	public TeamDto selectOne(TeamDto teamDto) {
+		return teamDao.selectOne(teamDto);
+	}
 
 }

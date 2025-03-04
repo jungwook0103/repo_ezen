@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<table>
+<tr>
+	<td>homeseq</td>
+	<td>homepage</td>
+	<td>contact_contactseq</td>
+	<td>main</td>
+</tr>
+<tr th:each = "list : ${list}">
+	<td th:text = "${list.homeseq}"></td>
+	<td><a th:href = "@{/contacthp/contacthpXdmView(homeseq=${list.homeseq})}" th:text="${list.homepage}"></a></td>
+	<td th:text = "${list.contact_contactseq}"></td>
+	<td th:text = "${list.main}"></td>
+</tr>
+</table>
+</body>
+</html>	
+	 	

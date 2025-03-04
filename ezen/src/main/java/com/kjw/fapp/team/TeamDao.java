@@ -11,6 +11,8 @@ public interface TeamDao {
 //	쿼리 결과를 가져옴
 	
 	public List<TeamDto> selectList();
+	
+	public TeamDto selectOne(TeamDto teamDto);
 		
 	
 

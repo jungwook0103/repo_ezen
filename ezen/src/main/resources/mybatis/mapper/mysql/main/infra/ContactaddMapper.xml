@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.kjw.fapp.contact.ContactDao">
+<mapper namespace="com.kjw.fapp.contactadd.ContactaddDao">
 
-	<resultMap id="resultMapObj" type="com.kjw.fapp.contact.ContactDto"></resultMap>
+	<resultMap id="resultMapObj" type="com.kjw.fapp.contactadd.ContactaddDto"></resultMap>
 	
 	<select id="selectList" resultMap="resultMapObj">
 		SELECT * FROM
-			contact	
+			contactadd	
 		WHERE 1=1
-		ORDER BY contactseq DESC
+		ORDER BY addseq DESC
 	</select>
 	
 	<select id="selectOne" resultMap="resultMapObj">
 		SELECT * FROM
-			contact	
+			contactadd
 		WHERE 1=1
-		AND contactseq = #{contactseq}
+		AND addseq = #{addseq}
 	</select>
 </mapper>	

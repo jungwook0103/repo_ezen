@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<table>
+<tr>
+	<td>snsseq</td>
+	<td>section</td>
+	<td>sns</td>
+	<td>contact_contactseq</td>
+	<td>main</td>
+	
+</tr>
+<tr th:each="list : ${list}">
+	<td th:text = "${list.snsseq}"></td>
+	<td th:text = "${list.section}"></td>	
+	<td><a th:href = "@{/contactsns/contactsnsXdmView(snsseq=${list.snsseq})}" th:text="${list.sns}"></a></td>
+	<td th:text = "${list.contact_contactseq}"></td>
+	<td th:text = "${list.main}"></td>
+	
+</tr>
+</table>
+</body>
+</html>

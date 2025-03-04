@@ -18,4 +18,11 @@ public class ContactController {
 		return "contact/contactXdmList";
 	}
 
+	@RequestMapping(value = "/contact/contactXdmView")
+	public String codeGroupXdmView(Model model, ContactDto contactDto) {
+		
+		model.addAttribute("item", contactService.selectOne(contactDto));
+		
+		return "contact/contactXdmView";
+	}
 }
