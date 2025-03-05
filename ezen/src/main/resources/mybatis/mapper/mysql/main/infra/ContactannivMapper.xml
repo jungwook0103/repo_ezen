@@ -18,4 +18,25 @@
 		WHERE 1=1
 		AND annivseq = #{annivseq}
 	</select>
+	<insert id="insert">
+	INSERT INTO contactanniv (		
+		section,
+		date,
+		solarLunar,
+		main,
+		contact_contactseq
+			
+	) values (		
+		#{section},
+		#{date},
+		#{solarLunar},
+		#{main},
+		#{contact_contactseq}
+
+	)
+	  
+	<selectKey resultType="String" keyProperty="annivseq" order="AFTER">
+		SELECT last_insert_id()
+	</selectKey>
+	</insert>
 </mapper>	

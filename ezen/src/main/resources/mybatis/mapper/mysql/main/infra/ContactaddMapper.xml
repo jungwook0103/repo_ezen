@@ -18,4 +18,27 @@
 		WHERE 1=1
 		AND addseq = #{addseq}
 	</select>
+	
+	<insert id="insert">
+	INSERT INTO contactadd (		
+		
+		section,
+		zipcode,
+		address,		
+		main,
+		contact_contactseq		
+	) values (		
+		
+		#{section},
+		#{zipcode},
+		#{address},
+		#{main},
+		#{contact_contactseq}
+		
+	)
+	  
+	<selectKey resultType="String" keyProperty="addseq" order="AFTER">
+		SELECT last_insert_id()
+	</selectKey>
+	</insert>
 </mapper>	

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/contactcomp/contactcompXdmInst" method="post" id = "form">
+
+	companyseq: <input type="text" name = "companyseq" id = "companyseq" maxlength="10" disabled/>
+	company: <input type="text" name = "company" id = "company" placeholder = "입력해주세요."/>
+	main: <input type="text" name = "main" id = "main" placeholder = "입력해주세요."/>
+	contact_contactseq: <input type="text" name = "contact_contactseq" id = "contact_contactseq" placeholder = "입력해주세요."/>
+	
+	<button type = "button" id="btnSave">저장</button>
+</form>
+
+<script type="text/javascript">
+
+	document.getElementById("btnSave").onclick= function () {
+				
+		document.getElementById("form").submit();
+	}
+	
+	
+</script>
+</body>
+</html>

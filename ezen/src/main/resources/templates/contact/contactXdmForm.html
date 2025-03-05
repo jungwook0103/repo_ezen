@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/contact/contactXdmInst" method="post" id = "form">
+
+	contactseq: <input type="text" name = "contactseq" id = "contactseq" maxlength="10" disabled/>
+	lastName: <input type="text" name = "lastName" id = "lastName" placeholder = "입력해주세요."/>
+	firstName: <input type="text" name = "firstName" id = "firstName" placeholder = "입력해주세요."/>
+	id: <input type="text" name = "id" id = "id" placeholder = "입력해주세요."/>
+	memo: <input type="text" name = "memo" id = "memo" placeholder = "입력해주세요."/>
+	nickname: <input type="text" name = "nickname" id = "nickname" placeholder = "입력해주세요."/>
+	bookmark: <input type="text" name = "bookmark" id = "bookmark" placeholder = "입력해주세요."/>
+	<button type = "button" id="btnSave">저장</button>
+</form>
+
+<script type="text/javascript">
+
+	document.getElementById("btnSave").onclick= function () {
+				
+		document.getElementById("form").submit();
+	}
+	
+	
+</script>
+</body>
+</html>

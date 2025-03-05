@@ -28,6 +28,17 @@ public class ContactaddController {
 		
 		return "contactadd/contactaddXdmView";
 	}
+	
+	@RequestMapping(value = "/contactadd/contactaddXdmForm")
+	public String codeGroupXdmForm() {
+		return "contactadd/contactaddXdmForm";
+	}
+	
+	@RequestMapping(value = "/contactadd/contactaddXdmInst")
+	public String codeGroupXdmInst(ContactaddDto contactaddDto) {
+		contactaddService.insert(contactaddDto);
+		return "redirect:/contactadd/contactaddXdmList";
+	}
 }
 
 

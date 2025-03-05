@@ -21,5 +21,16 @@ public class ContacthpController {
 		model.addAttribute("item", contacthpService.selectOne(contacthpDto));
 		return "contacthp/contacthpXdmView";
 	}
+	
+	@RequestMapping(value = "/contacthp/contacthpXdmForm")
+	public String codeGroupXdmForm () {
+		return "contacthp/contacthpXdmForm";
+	}
+	
+	@RequestMapping(value = "/contacthp/contacthpXdmInst")
+	public String codeGroupXdmInst (ContacthpDto contacthpDto) {
+		contacthpService.insert(contacthpDto);
+		return "redirect:/contacthp/contacthpXdmList";
+	}
 
 }

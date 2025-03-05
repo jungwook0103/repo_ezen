@@ -18,5 +18,9 @@ public class ContactcompService {
 	public ContactcompDto selectOne(ContactcompDto contactcompDto) {
 		return contactcompDao.selectOne(contactcompDto);
 	}
+	
+	public int insert(ContactcompDto contactcompDto) {
+		return contactcompDao.insert(contactcompDto);
+	}
 
 }

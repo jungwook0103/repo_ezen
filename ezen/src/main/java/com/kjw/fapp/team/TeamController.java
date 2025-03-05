@@ -32,10 +32,26 @@ public class TeamController {
 	@RequestMapping(value = "/team/teamXdmView")
 	public String codeGroupXdmView(Model model, TeamDto teamDto) {
 		
-		System.out.println("teamDto.getGroupseq(): " + teamDto.getGroupseq());
+		//System.out.println("teamDto.getGroupseq(): " + teamDto.getGroupseq());
 			
 		model.addAttribute("item", teamService.selectOne(teamDto));
 		
 		return "team/teamXdmView";
+	}
+	
+	@RequestMapping(value = "/team/teamXdmForm")
+	public String codeGroupXdmForm() {
+		
+		
+		return "team/teamXdmForm";
+	}
+	
+	@RequestMapping(value = "/team/teamXdmInst")
+	public String codeGroupXdmInst(TeamDto teamDto) {		
+		System.out.println("Groupseq: " + teamDto.getGroupseq());
+		System.out.println("Name: " + teamDto.getName());		
+		teamService.insert(teamDto);
+		System.out.println(teamDto.getGroupseq());
+		return "redirect:/team/teamXdmList";
 	}
 }

@@ -21,5 +21,16 @@ public class ContactcompController {
 		model.addAttribute("item", contactcompService.selectOne(contactcompDto));
 		return "contactcomp/contactcompXdmView";
 	}
+	
+	@RequestMapping(value = "/contactcomp/contactcompXdmForm")
+	public String codeGroupXdmForm() {
+		return "contactcomp/contactcompXdmForm";
+	}
+	
+	@RequestMapping(value = "/contactcomp/contactcompXdmInst")
+	public String codeGroupXdmInst(ContactcompDto contactcompDto) {
+		contactcompService.insert(contactcompDto);
+		return "redirect:/contactcomp/contactcompXdmList";
+	}
 
 }

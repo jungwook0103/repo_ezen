@@ -8,19 +8,22 @@
 	<td>annivseq</td>
 	<td>section</td>
 	<td>date</td>
-	<td>solarLunar</td>
-	<td>contact_contactseq</td>
+	<td>solarLunar</td>	
 	<td>main</td>
+	<td>contact_contactseq</td>
 </tr>
 <tr th:each="list : ${list}">
 	<td th:text = "${list.annivseq}"></td>
 	<td th:text = "${list.section}"></td>
 	<td><a th:href = "@{/contactanniv/contactannivXdmView(annivseq=${list.annivseq})}" th:text="${list.date}"></a></td>
 	<td th:text = "${list.solarLunar}"></td>
-	<td th:text = "${list.contact_contactseq}"></td>
+	
 	<td th:text = "${list.main}"></td>
+	<td th:text = "${list.contact_contactseq}"></td>
 </tr>
 </table>
+<br>
+<a href = "/contactanniv/contactannivXdmForm"><button type="button">등록</button></a>
 </body>
 </html>	
 	

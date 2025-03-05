@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/contactadd/contactaddXdmInst" method="post" id = "form">
+
+	addseq: <input type="text" name = "addseq" id = "addseq" maxlength="10" disabled/>
+	section: <input type="text" name = "section" id = "section" placeholder = "입력해주세요."/>
+	zipcode: <input type="text" name = "zipcode" id = "zipcode" placeholder = "입력해주세요."/>
+	address: <input type="text" name = "address" id = "address" placeholder = "입력해주세요."/>
+	contact_contactseq: <input type="text" name = "contact_contactseq" id = "contact_contactseq" placeholder = "입력해주세요."/>
+	main: <input type="text" name = "main" id = "main" placeholder = "입력해주세요."/>
+	
+	<button type = "button" id="btnSave">저장</button>
+</form>
+
+<script type="text/javascript">
+
+	document.getElementById("btnSave").onclick= function () {
+				
+		document.getElementById("form").submit();
+	}
+	
+	
+</script>
+</body>
+</html>

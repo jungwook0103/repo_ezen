@@ -7,15 +7,19 @@
 <tr>
 	<td>companyseq</td>
 	<td>company</td>
-	<td>contact_contactseq</td>
+	
 	<td>main</td>
+	<td>contact_contactseq</td>
 </tr>
 <tr th:each="list : ${list}">
 	<td th:text = "${list.companyseq}"></td>	
 	<td><a th:href = "@{/contactcomp/contactcompXdmView(companyseq=${list.companyseq})}" th:text="${list.company}"></a></td>	
-	<td th:text = "${list.contact_contactseq}"></td>	
+		
 	<td th:text = "${list.main}"></td>	
+	<td th:text = "${list.contact_contactseq}"></td>	
 </tr>
 </table>
+<br>
+<a href = "/contactcomp/contactcompXdmForm"><button type="button">등록</button></a>
 </body>
 </html>	

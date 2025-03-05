@@ -19,6 +19,10 @@ public class ContactaddService {
 	public ContactaddDto selectOne(ContactaddDto contactaddDto) {
 		return contactaddDao.selectOne(contactaddDto);
 	}
+	
+	public int insert(ContactaddDto contactaddDto) {
+		return contactaddDao.insert(contactaddDto);
+	}
 
 }
 

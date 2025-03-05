@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/contacthp/contacthpXdmInst" method="post" id = "form">
+
+	homeseq: <input type="text" name = "homeseq" id = "homeseq" maxlength="10" disabled/>
+	
+	homepage: <input type="text" name = "homepage" id = "homepage" placeholder = "입력해주세요."/>
+	main: <input type="text" name = "main" id = "main" placeholder = "입력해주세요."/>
+	contact_contactseq: <input type="text" name = "contact_contactseq" id = "contact_contactseq" placeholder = "입력해주세요."/>
+	
+	<button type = "button" id="btnSave">저장</button>
+</form>
+
+<script type="text/javascript">
+
+	document.getElementById("btnSave").onclick= function () {
+				
+		document.getElementById("form").submit();
+	}
+	
+	
+</script>
+</body>
+</html>

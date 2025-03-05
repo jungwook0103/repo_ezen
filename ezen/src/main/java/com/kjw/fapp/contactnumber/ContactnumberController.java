@@ -22,5 +22,16 @@ public class ContactnumberController {
 		model.addAttribute("item", contactnumberService.selectOne(contactnumberDto));
 		return "contactnumber/contactnumberXdmView";
 	}
+	
+	@RequestMapping(value = "/contactnumber/contactnumberXdmForm")
+	public String codeGroupXdmForm () {
+		return "contactnumber/contactnumberXdmForm";
+	}
+	
+	@RequestMapping(value = "/contactnumber/contactnumberXdmInst")
+	public String codeGroupXdmInst (ContactnumberDto contactnumberDto) {
+		contactnumberService.insert(contactnumberDto);
+		return "redirect:/contactnumber/contactnumberXdmList";
+	}
 
 }

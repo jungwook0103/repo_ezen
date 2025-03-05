@@ -18,4 +18,22 @@
 		WHERE 1=1
 		AND homeseq = #{homeseq}
 	</select>
+	
+	<insert id="insert">
+	INSERT INTO contacthp (		
+		homepage,
+		main,
+		contact_contactseq
+				
+	) values (		
+		#{homepage},
+		#{main},
+		#{contact_contactseq}
+		
+	)
+	  
+	<selectKey resultType="String" keyProperty="homeseq" order="AFTER">
+		SELECT last_insert_id()
+	</selectKey>
+	</insert>
 </mapper>	

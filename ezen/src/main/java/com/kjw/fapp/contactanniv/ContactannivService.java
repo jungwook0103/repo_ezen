@@ -20,6 +20,10 @@ public class ContactannivService {
 		return contactannivDao.selectOne(contactannivDto);
 	}
 	
+	public int insert(ContactannivDto contactannivDto) {
+		return contactannivDao.insert(contactannivDto);
+	}
+	
 	
 
 }

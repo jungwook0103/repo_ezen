@@ -10,5 +10,7 @@ public interface ContacthpDao {
 	public List<ContacthpDto> selectList();
 	
 	public ContacthpDto selectOne(ContacthpDto contacthpDto);
+	
+	public int insert(ContacthpDto contacthpDto);
 
 }

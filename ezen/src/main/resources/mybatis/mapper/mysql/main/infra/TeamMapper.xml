@@ -24,5 +24,17 @@
 		WHERE 1=1
 		AND groupseq = #{groupseq}
 	</select>
+	
+	<insert id="insert">
+	INSERT INTO team (		
+		name
+	) values (		
+		#{name}
+	)
+	  
+	<selectKey resultType="String" keyProperty="groupseq" order="AFTER">
+		SELECT last_insert_id()
+	</selectKey>
+	</insert>
 	  
 </mapper>

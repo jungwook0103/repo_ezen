@@ -12,17 +12,28 @@ public class ContactsnsController {
 	ContactsnsService contactsnsService;
 	
 	@RequestMapping(value = "/contactsns/contactsnsXdmList")
-	public String codeGroupList(Model model) {
+	public String codeGroupXdmList(Model model) {
 		model.addAttribute("list", contactsnsService.selectList());
 		
 		return "contactsns/contactsnsXdmList";
 	}
 	
 	@RequestMapping(value = "/contactsns/contactsnsXdmView")
-	public String codeGroupView(Model model, ContactsnsDto contactsnsDto) {
+	public String codeGroupXdmView(Model model, ContactsnsDto contactsnsDto) {
 		model.addAttribute("item", contactsnsService.selectOne(contactsnsDto));
 		
 		return "contactsns/contactsnsXdmView";
+	}
+	
+	@RequestMapping(value = "/contactsns/contactsnsXdmForm")
+	public String codeGroupXdmForm() {
+		return "contactsns/contactsnsXdmForm";
+	}
+	
+	@RequestMapping(value = "/contactsns/contactsnsXdmInst")
+	public String codeGroupXdmInst(ContactsnsDto contactsnsDto) {
+		contactsnsService.insert(contactsnsDto);
+		return "redirect:/contactsns/contactsnsXdmList";
 	}
 	
 	

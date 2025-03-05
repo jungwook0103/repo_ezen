@@ -31,4 +31,7 @@ public class TeamService {
 		return teamDao.selectOne(teamDto);
 	}
 
+	public int insert(TeamDto teamDto) {
+		return teamDao.insert(teamDto);
+	}
 }

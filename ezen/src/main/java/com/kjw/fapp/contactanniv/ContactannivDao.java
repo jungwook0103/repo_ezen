@@ -10,5 +10,7 @@ public interface ContactannivDao {
 	public List<ContactannivDto> selectList();
 	
 	public ContactannivDto selectOne(ContactannivDto contactannivDto);
+	
+	public int insert(ContactannivDto contactannivDto);
 
 }

@@ -24,5 +24,16 @@ public class ContactannivController {
 		
 		return "contactanniv/contactannivXdmView";
 	}
+	
+	@RequestMapping(value = "/contactanniv/contactannivXdmForm")
+	public String codeGroupXdmForm() {
+		return "contactanniv/contactannivXdmForm";
+	}
+	
+	@RequestMapping(value = "/contactanniv/contactannivXdmInst")
+	public String codeGroupXdmInst(ContactannivDto contactannivDto) {
+		contactannivService.insert(contactannivDto);
+		return "redirect:/contactanniv/contactannivXdmList";
+	}
 
 }

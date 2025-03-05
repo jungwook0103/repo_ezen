@@ -10,5 +10,7 @@ public interface ContactsnsDao {
 	public List<ContactsnsDto> selectList();
 	
 	public ContactsnsDto selectOne(ContactsnsDto contactsnsDto);
+	
+	public int insert(ContactsnsDto contactsnsDto);
 
 }

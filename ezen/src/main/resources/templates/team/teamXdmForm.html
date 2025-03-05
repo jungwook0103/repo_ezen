@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/team/teamXdmInst" method="post" id = "form"> <!-- post방식과 다르게 get방식은 주소창에 데이터가 보임 -->
+<!-- enctype="multipart/form-data"는 데이터 전송 시 사진과 함께 -->
+	seq: <input type="text" name = "groupseq" id = "groupseq" maxlength="10" disabled/>
+	name: <input type="text" name = "name" id = "name" placeholder = "이름을 입력해주세요."/>
+	<button type = "button" id="btnSave">저장</button>
+</form>
+
+<script type="text/javascript">
+
+	document.getElementById("btnSave").onclick= function () { // onchange : 변화 생겼을 때
+		//alert("버튼 클릭");
+		//location.href = "/team/teamXdmInst";
+		document.getElementById("form").submit();
+	}
+	
+	
+</script>
+</body>
+</html>

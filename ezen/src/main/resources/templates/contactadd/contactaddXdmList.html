@@ -8,19 +8,22 @@
 	<td>addseq</td>
 	<td>section</td>
 	<td>zipcode</td>
-	<td>address</td>
-	<td>contact_contactseq</td>
-	<td>main</td>	
+	<td>address</td>	
+	<td>contact_contactseq</td>	
+	<td>main</td>
 </tr>
 <tr th:each="list : ${list}">
 	<td th:text = "${list.addseq}"></td>
 	<td th:text = "${list.section}"></td>
 	<td th:text = "${list.zipcode}"></td>
 	<td><a th:href = "@{/contactadd/contactaddXdmView(addseq=${list.addseq})}" th:text="${list.address}"></a></td>
+	
 	<td th:text = "${list.contact_contactseq}"></td>
 	<td th:text = "${list.main}"></td>
 	
 </tr>
 </table>
+<br>
+<a href = "/contactadd/contactaddXdmForm"><button type="button">등록</button></a>
 </body>
 </html>

@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.kjw.fapp.team.TeamDto;
+
 @Service
 public class ContactService {
 	
@@ -18,6 +20,10 @@ public class ContactService {
 	
 	public ContactDto selectOne(ContactDto contactDto) {
 		return contactDao.selectOne(contactDto);
+	}
+	
+	public int insert(ContactDto contactDto) {
+		return contactDao.insert(contactDto);
 	}
 
 }

@@ -8,12 +8,16 @@
 	<td>emailseq</td>
 	<td>email</td>
 	<td>contact_contactseq</td>
+	
 </tr>
 <tr th:each="list : ${list}">
 	<td th:text = "${list.emailseq}"></td>
 	<td><a th:href = "@{/contactemail/contactemailXdmView(emailseq=${list.emailseq})}" th:text="${list.email}"></a></td>
 	<td th:text = "${list.contact_contactseq}"></td>
+	
 </tr>
 </table>
+<br>
+<a href = "/contactemail/contactemailXdmForm"><button type="button">등록</button></a>
 </body>
 </html>			

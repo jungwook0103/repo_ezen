@@ -22,5 +22,16 @@ public class ContactemailController {
 		model.addAttribute("item", contactemailService.selectOne(contactemailDto));
 		return "contactemail/contactemailXdmView";
 	}
+	
+	@RequestMapping(value = "/contactemail/contactemailXdmForm")
+	public String codeGroupXdmForm() {
+		return "contactemail/contactemailXdmForm";
+	}
+	
+	@RequestMapping(value = "/contactemail/contactemailXdmInst")
+	public String codeGroupXdmInst(ContactemailDto contactemailDto) {
+		contactemailService.insert(contactemailDto);
+		return "redirect:/contactemail/contactemailXdmList";
+	}
 
 }
